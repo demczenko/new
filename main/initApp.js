@@ -115,7 +115,6 @@ export function initApp({ tableColumns, token, campaigns, optimizeImg }) {
         getProductById: handlers.getProductById,
         getCategory: handlers.getCategory,
         getField: handlers.getField,
-        getProductFromServer: handlers.getProductFromServer,
       });
       if (html.includes("undefined")) {
         if (confirm("Do you want to render template with undefined value?")) {

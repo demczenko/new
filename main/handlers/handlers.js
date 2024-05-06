@@ -1,9 +1,7 @@
 import categories from "../../data/categories/data.js";
 import { handleProduct } from "./index.js";
-import { getProduct } from "../../api/product.js";
 import { getQueryLink } from "../../helpers/getQueryLink.js";
 import origins from "../../data/templates/origins.js";
-import { setState } from "../initApp.js";
 
 export class TemplateHandlers {
 
@@ -127,34 +125,6 @@ export class TemplateHandlers {
     if (filterToSelectedCountry) {
       return filterToSelectedCountry[field];
     }
-    return "Not found";
-  }
-
-  getProductFromServer = async (productId) => {
-    const country_products = products.filter(
-      (product) => product.country === this.country.toLowerCase()
-    );
-    const product = country_products.find(
-      (product) => Number(product.main_id) === Number(productId)
-    );
-
-    setState("loading", true);
-    const serverProducts = await getProduct([
-      {
-        main_id: productId,
-        src: product?.src ?? "",
-      },
-    ]);
-
-    const serverProductCountry = serverProducts.filter(
-      (product) => product.country === this.country.toLowerCase()
-    );
-
-    const serverProduct = serverProductCountry.find(
-      (product) => Number(product.main_id) === Number(productId)
-    );
-
-    setState("false", true);
-    return handleProduct(serverProduct);
+    throw new Error(`Field ${field} not found.`)
   }
 }

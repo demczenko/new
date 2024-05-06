@@ -1,9 +1,5 @@
-import { parseShopId } from "../../helpers/index.js";
 import { getState } from "../../main/initApp.js";
 import { utils } from "../../utils/index.js";
-import { getCategory } from "../category.js";
-import { getIds } from "../product.js";
-import { getTranslations } from "../translations.js";
 
 export const fetchTranslations = async ({ tableQueries, tableColumns }) => {
   const country = getState("country");
@@ -51,26 +47,24 @@ export const fetchTranslations = async ({ tableQueries, tableColumns }) => {
   return computedPromise;
 };
 
-export const fetchProductsShopIds = async () => {
-  const XLSProducts = getState("products_main_id");
-
-  const shopsIDs = await getIds(XLSProducts);
-  const parsedShopIds = parseShopId(XLSProducts, shopsIDs);
-  return parsedShopIds;
-};
-
-export const fetchCategories = async ({ categories }) => {
-  const country = getState("country");
-  const parsedCategories = [];
-  for (const category of categories) {
-    const result = await getCategory(category.category, country);
-    if (result.status === "success") {
-      const { data } = result;
-      parsedCategories.push({
-        ...category,
-        href: data.origin + data.category,
-      });
-    }
+async function getTranslations(
+  { tableId, tableName, tableRange, name },
+  token
+) {
+  try {
+    const response = await fetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${tableId}/values/${tableName}${tableRange}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+        },
+      }
+    );
+    const data = await response.json();
+    return { ...data, name };
+  } catch (error) {
+    console.log(error);
   }
-  return parsedCategories;
-};
+}

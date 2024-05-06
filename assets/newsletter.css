@@ -54,6 +54,13 @@
   line-height: 1.25;
 }
 
+.newsletterTitleNew {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
 .newsletterTitle {
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
@@ -219,6 +226,10 @@
 
   .newsletterTitle {
     font-size: 25px;
+  }
+
+  .newsletterTitleNew {
+    font-size: 18px;
   }
 
   .newsletterContainer {

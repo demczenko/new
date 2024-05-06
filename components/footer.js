@@ -20,7 +20,7 @@ export function Footer(
     companyDetails,
     conditionsTitle,
     conditionsText,
-    unsubscribeTitle
+    unsubscribeTitle,
   },
   { type, country }
 ) {
@@ -49,14 +49,18 @@ export function Footer(
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${firstCategory.href}">
-                                            <img loading="lazy" src="${firstCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              firstCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${secondCategory.href}">
-                                            <img loading="lazy" src="${secondCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              secondCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -65,14 +69,18 @@ export function Footer(
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${thirdCategory.href}">
-                                            <img loading="lazy" src="${thirdCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              thirdCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${foutrthCategory.href}">
-                                            <img loading="lazy" src="${foutrthCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              foutrthCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -81,14 +89,18 @@ export function Footer(
                                     <td class="newsletterFooterCategoryLEFT">
                                         <a
                                             href="${fifthCategory.href}">
-                                            <img loading="lazy" src="${fifthCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              fifthCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHT">
                                         <a
                                             href="${sixthCategory.href}">
-                                            <img loading="lazy" src="${sixthCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              sixthCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -97,14 +109,18 @@ export function Footer(
                                     <td class="newsletterFooterCategoryLEFTBottom">
                                         <a
                                             href="${seventhCategory.href}">
-                                            <img loading="lazy" src="${seventhCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              seventhCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
                                     <td class="newsletterFooterCategoryRIGHTBottom">
                                         <a
                                             href="${eigthCategory.href}">
-                                            <img loading="lazy" src="${eigthCategory.src}" alt=""
+                                            <img loading="lazy" src="${
+                                              eigthCategory.src
+                                            }" alt=""
                                                 style="display:block; max-width: 100%;"  border="0" />
                                         </a>
                                     </td>
@@ -113,6 +129,9 @@ export function Footer(
                         </table>
                     </td>
                 </tr>
+            <tr>
+                <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
+            </tr>
             ${
                 ["SK", "HU"].includes(country)
                   ? ""
@@ -146,7 +165,7 @@ export function Footer(
                                                 <tr>
                                                     <td class="newsletterTopBottomContainer">
                                                         <span class="newsletterFooterTitle">
-                                                              Folge uns auf
+                                                              ${socials.title}
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -159,32 +178,56 @@ export function Footer(
                                                 <tr>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${socials.instagram.href}">
-                                                            <img loading="lazy" src="${socials.instagram.src}"
+                                                            href="${
+                                                              socials.instagram
+                                                                .href
+                                                            }">
+                                                            <img loading="lazy" src="${
+                                                              socials.instagram
+                                                                .src
+                                                            }"
                                                                  border="0" style="display:block; max-width: 100%;"
                                                                 alt="Instagram">
                                                         </a>
                                                     </td>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${socials.facebook.href}">
-                                                            <img loading="lazy" src="${socials.facebook.src}"
+                                                            href="${
+                                                              socials.facebook
+                                                                .href
+                                                            }">
+                                                            <img loading="lazy" src="${
+                                                              socials.facebook
+                                                                .src
+                                                            }"
                                                                  border="0" style="display:block; max-width: 100%;"
                                                                 alt="Facebook">
                                                         </a>
                                                     </td>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${socials.youtube.href}">
-                                                            <img loading="lazy" src="${socials.youtube.src}"
+                                                            href="${
+                                                              socials.youtube
+                                                                .href
+                                                            }">
+                                                            <img loading="lazy" src="${
+                                                              socials.youtube
+                                                                .src
+                                                            }"
                                                                  border="0" style="display:block; max-width: 100%;"
                                                                 alt="YouTube">
                                                         </a>
                                                     </td>
                                                     <td class="newsletterSocialIcon">
                                                         <a
-                                                            href="${socials.pinterest.href}">
-                                                            <img loading="lazy" src="${socials.pinterest.src}"
+                                                            href="${
+                                                              socials.pinterest
+                                                                .href
+                                                            }">
+                                                            <img loading="lazy" src="${
+                                                              socials.pinterest
+                                                                .src
+                                                            }"
                                                                  border="0" style="display:block; max-width: 100%;"
                                                                 alt="Pinterest">
                                                         </a>
