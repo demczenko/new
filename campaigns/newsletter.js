@@ -594,7 +594,7 @@ export async function newsletter({
             href: getField(queries.footer, "Advantages href 4"),
           },
           companyDetails: {
-            title: getField(queries.footer, "Title"),
+            title: getField(queries.footer, "Company Details"),
             address: getField(queries.footer, "Address"),
             mobileNumber: getField(queries.footer, "Mobile number"),
             emailAddress: getField(queries.footer, "Email address"),
