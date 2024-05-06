@@ -111,6 +111,24 @@ export async function newsletter({
     },
     { country, type }
   )}
+  ${
+    country === "UK"
+      ? `
+      <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: #ffccb7; color: #000;" >
+        <tbody>
+          <tr>
+            <td>
+              <img loading="lazy" src=${getField(
+                queries.header,
+                "Header asembly src"
+              )} style="display: block; max-width: 100%;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+              `
+      : ""
+  }
       <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: #ffccb7; color: #000;" >
           <tbody>
               <tr>
