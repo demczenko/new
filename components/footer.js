@@ -113,17 +113,23 @@ export function Footer(
                         </table>
                     </td>
                 </tr>
-            <tr>
-                <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
-            </tr>
-            <!--KLARNA-->
-            <tr>
-                <td class="newsletterTopBottomContainer">
-                    <a href="${klarna.href}">
-                        <img alt="" border="0"  src="${klarna.src}" style="display:block; max-width: 100%;"/>
-                    </a>
-                </td>
-            </tr>
+            ${
+                ["SK", "HU"].includes(country)
+                  ? ""
+                  : `
+                  <tr>
+                        <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
+                    </tr>
+                  <!--KLARNA-->
+                  <tr>
+                      <td class="newsletterTopBottomContainer">
+                          <a href="${klarna.href}">
+                              <img alt="" border="0"  src="${klarna.src}" style="display:block; max-width: 100%;"/>
+                          </a>
+                      </td>
+                  </tr>
+                  `
+              }
                 <tr>
                     <td>
                         <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
@@ -296,17 +302,23 @@ export function Footer(
                         </table>
                     </td>
                 </tr>
-            <tr>
-                <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
-            </tr>
-            <!--KLARNA-->
-            <tr>
-                <td class="newsletterTopBottomContainer">
-                    <a href="${klarna.href}">
-                        <img alt="" border="0"  src="${klarna.src}" style="display:block; max-width: 100%;"/>
-                    </a>
-                </td>
-            </tr>
+            ${
+                ["SK", "HU"].includes(country)
+                  ? ""
+                  : `
+                  <tr>
+                        <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
+                    </tr>
+                  <!--KLARNA-->
+                  <tr>
+                      <td class="newsletterTopBottomContainer">
+                          <a href="${klarna.href}">
+                              <img alt="" border="0"  src="${klarna.src}" style="display:block; max-width: 100%;"/>
+                          </a>
+                      </td>
+                  </tr>
+                  `
+              }
                 <tr>
                     <td>
                         <img loading="lazy" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  alt="">
