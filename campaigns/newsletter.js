@@ -498,6 +498,22 @@ export async function newsletter({
                       </table>
                   </td>
               </tr>
+              ${ country === "UK" ? `
+              <tr>
+              <td class="newsletterBottom35px" >
+                ${Line()}
+              </td>
+            </tr>
+              <tr>
+              <td >
+                <img loading="lazy" src=${getField(queries.footer, "Asembly src")} style="display: block; max-width: 100%;">
+              </td>
+            </tr>
+            <tr>
+            <td class="newsletterBottom35px" >
+            </td>
+          </tr>
+              ` : ""}
           </tbody>
       </table>
       ${Footer(
