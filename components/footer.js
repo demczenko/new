@@ -129,9 +129,6 @@ export function Footer(
                         </table>
                     </td>
                 </tr>
-            <tr>
-                <td><img alt="" src="https://beliani.info/newsletter/2022/line.jpg" style="display:block; max-width: 100%;"  /></td>
-            </tr>
             ${
                 ["SK", "HU"].includes(country)
                   ? ""
@@ -248,7 +245,7 @@ export function Footer(
                 </tr>
                 <tr>
                     <td class="newsletterTopBottomContainer" align="left">
-                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText}</span>
+                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText[0] + conditionsText[1]}</span>
                     </td>
                 </tr>
             </tbody>
@@ -487,7 +484,7 @@ export function Footer(
                 </tr>
                 <tr>
                     <td class="newsletterTopBottomContainer" align="left">
-                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText}</span>
+                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText[0] + conditionsText[1]}</span>
                     </td>
                 </tr>
             </tbody>
