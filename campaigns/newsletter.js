@@ -425,7 +425,7 @@ export async function newsletter({
           },
           title: getField(queries.footer, "Title"),
           conditionsTitle: getField(queries.footer, "Conditions title"),
-          conditionsText: queries.condition[0] + " " + queries.condition[1],
+          conditionsText: queries.condition,
           unsubscribeTitle: getField(queries.footer, "Unsubscribe title"),
         },
         { country, type }
