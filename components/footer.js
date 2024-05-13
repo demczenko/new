@@ -245,7 +245,7 @@ export function Footer(
                 </tr>
                 <tr>
                     <td class="newsletterTopBottomContainer" align="left">
-                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText[0] + conditionsText[1]}</span>
+                        <span class="newsletterConditions" style="color: #000000;">${conditionsTitle} ${conditionsText[0]}</span>
                     </td>
                 </tr>
             </tbody>
