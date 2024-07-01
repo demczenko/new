@@ -1,5 +1,5 @@
 const normalizeTranslations = (translations) => {
-  return translations.flat().map((t) => t.replaceAll("\n", "<br />"));
+    return translations.map(item => item.length===0 ? "" : item).flat().map((t) => t.replaceAll("\n", "<br />"));
 };
 
 export default normalizeTranslations;
